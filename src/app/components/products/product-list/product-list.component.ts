@@ -3,6 +3,8 @@ import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/models/product';
 import { element } from 'protractor';
 
+
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',

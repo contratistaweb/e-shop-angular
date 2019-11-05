@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { from } from 'rxjs';
 //components
 import { ProductsComponent } from './components/products/products.component';
@@ -17,6 +18,8 @@ import { ProductListComponent } from './components/products/product-list/product
 import { ProductComponent } from './components/products/product/product.component';
 //services
 import { ProductService } from './services/product.service';
+import { LoginComponent } from './components/login/login.component';
+import { PrivatepageComponent } from './components/privatepage/privatepage.component';
 //animaciones
 
 
@@ -25,14 +28,17 @@ import { ProductService } from './services/product.service';
     AppComponent,
     ProductsComponent,
     ProductListComponent,
-    ProductComponent
+    ProductComponent,
+    LoginComponent,
+    PrivatepageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    FormsModule
+    FormsModule,
+    AngularFireAuthModule
   ],
   providers: [
     ProductService

@@ -1,0 +1,14 @@
+.container-fluid {
+    background-image: url("../../../assets/login-fondo.jpg");
+    min-height: 600px;
+}
+
+#email,
+#password,
+.btn {
+    border-radius: 25px;
+}
+
+form {
+    color: whitesmoke;
+}
