@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
+import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 
 
@@ -18,6 +19,7 @@ import { ProductListComponent } from './components/products/product-list/product
 import { ProductComponent } from './components/products/product/product.component';
 //services
 import { ProductService } from './services/product.service';
+import { OauthService } from './services/oauth.service';
 import { LoginComponent } from './components/login/login.component';
 import { PrivatepageComponent } from './components/privatepage/privatepage.component';
 //animaciones
@@ -41,7 +43,8 @@ import { PrivatepageComponent } from './components/privatepage/privatepage.compo
     AngularFireAuthModule
   ],
   providers: [
-    ProductService
+    ProductService,
+    OauthService
   ],
   bootstrap: [AppComponent]
 })
