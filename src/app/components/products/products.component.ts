@@ -29,7 +29,7 @@ export class ProductsComponent implements OnInit {
     })
   }
 
-  onclickLogout(){
+  onClickLogout(){
     this.authService.logout()
   }
 }

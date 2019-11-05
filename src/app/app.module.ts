@@ -22,7 +22,8 @@ import { ProductService } from './services/product.service';
 import { OauthService } from './services/oauth.service';
 import { LoginComponent } from './components/login/login.component';
 import { PrivatepageComponent } from './components/privatepage/privatepage.component';
-//animaciones
+//guard
+import { AuthGuard } from './guards/auth.guard';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { PrivatepageComponent } from './components/privatepage/privatepage.compo
   ],
   providers: [
     ProductService,
-    OauthService
+    OauthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
