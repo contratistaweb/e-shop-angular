@@ -1,35 +1,34 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#" routerLink="/">La Boodega</a>
+    <a class="navbar-brand" href="/" routerLink="/">La Boodega</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#" routerLink="/">Carrito <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" routerLink="/login" *ngIf="!isLogin">Iniciar Sesion</a>
-            </li>
 
-            <li class="nav-item" *ngIf="isLogin">
-                <a class="nav-link" href="#" tabindex="-1" (click)="onClickLogout()">Salir</a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="¿Que estas buscando?" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-        </form>
-    </div>
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+            <a class="nav-link btn-sm btn-outline-primary" href="#" routerLink="/"><i class="small material-icons">local_grocery_store</i> Carrito<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn-sm btn-outline-danger" href="#" routerLink="/login" *ngIf="!isLogin"><i class="small material-icons">exit_to_app</i>Iniciar Sesion</a>
+        </li>
+
+        <li class="nav-item" *ngIf="isLogin">
+            <a class="nav-link" href="#" tabindex="-1" (click)="onClickLogout()">Salir</a>
+        </li>
+    </ul>
+    <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="¿Que estas buscando?" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
 </nav>
 
 
-<div class="row">
-    <div class="col-md-5">
-        <app-product></app-product>
-    </div>
-    <div class="col-md-5 text-center">
-        <app-product-list></app-product-list>
-    </div>
+
+<div class="col-md-5">
+    <app-product></app-product>
+</div>
+
+<div class="col-md-10 container">
+    <app-product-list></app-product-list>
 </div>

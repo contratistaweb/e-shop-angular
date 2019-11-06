@@ -1,0 +1,17 @@
+body {
+    background-image: url("./../../../../assets/main-fondo.jpg") !important;
+}
+
+img {
+    height: 200px;
+}
+
+.card {
+    margin: 1% !important;
+}
+
+.jumbotrom {
+    background-color: whitesmoke;
+    border-radius: 35px;
+    margin-top: 5%;
+}

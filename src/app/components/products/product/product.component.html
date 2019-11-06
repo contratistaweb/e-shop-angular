@@ -1,3 +1,4 @@
+<!-- *** formulario de carga a BD ***
 <div class="card mt-5">
     <div class="card-body">
         <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
@@ -6,10 +7,10 @@
                 <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="productService.selectedProduct.name" placeholder="Nombre producto">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="category" #category="ngModel" [(ngModel)]="productService.selectedProduct.category" placeholder="Categoria producto">
+                <input type="text" class="form-control" name="location" #location="ngModel" [(ngModel)]="productService.selectedProduct.location" placeholder="localizacion producto">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="location" #location="ngModel" [(ngModel)]="productService.selectedProduct.location" placeholder="localizacion producto">
+                <input type="text" class="form-control" name="unds" #unds="ngModel" [(ngModel)]="productService.selectedProduct.unds" placeholder="unds de producto">
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" name="price" #price="ngModel" [(ngModel)]="productService.selectedProduct.price" placeholder="precio producto">
@@ -27,3 +28,21 @@
         </form>
     </div>
 </div>
+-->
+
+<!-- Tarjeta ue va a aprecer a hacer clic en ver mas   **** 0j0
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img src="..." class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+</div>
+-->

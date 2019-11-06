@@ -1,5 +1,5 @@
 <!-- modulos de Productos (Creacion y visualizacion) -->
-
+<!-- *** lista de articulos ***
 <div class="card mt-5">
     <div class="card-body">
         <h6 class="text-center">Lista de Productos</h6>
@@ -8,8 +8,8 @@
         <tbody>
             <tr *ngFor="let product of productList">
                 <td>{{product.name}}</td>
-                <td>{{product.category}}</td>
                 <td>{{product.location}}</td>
+                <td>{{product.unds}}</td>
                 <td>{{product.price}}</td>
                 <td>
                     <a class="btn btn-secondary text-white" (click)="onEdit(product)">
@@ -21,4 +21,32 @@
             </tr>
         </tbody>
     </table>
+</div>
+
+
+-->
+
+<div class="jumbotrom row col flex-row justify-content-center">
+    <h1 class="display-4 col-12">Catalogo de Productos</h1>
+    <div class="card col-3" *ngFor="let product of productList">
+        <img src="{{product.location}}" class="card-img-top img-fluid" alt="{{product.name}}">
+        <div class="card-body">
+            <h5 class="card-title ">{{product.name}}</h5>
+            <p class="card-text ">Unds: {{product.unds}}</p>
+            <p class="card-text ">Precio: ${{product.price}}</p>
+
+            <a href="# " class="btn-sm btn-primary">Ver +</a>
+
+            <a href="# " class="btn-sm  btn-success">Añadir</a>
+            <select class="custom-select-sm m-1">
+                <option selected>unds</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+        </div>
+
+    </div>
 </div>

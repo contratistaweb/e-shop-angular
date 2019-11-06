@@ -18,17 +18,17 @@ export class ProductService {
   insertProduct(product:Product){
     this.productList.push({
       name : product.name,
-      category : product.category,
       location : product.location,
+      unds : product.unds,
       price : product.price
     });
   }
   updateProduct(product: Product){
     this.productList.update(product.$key, {
       name : product.name,
-      category : product.category,
       location : product.location,
-      price : product.price
+      price : product.price,
+      unds : product.unds
     })
   }
   deleteProduct($key: string){

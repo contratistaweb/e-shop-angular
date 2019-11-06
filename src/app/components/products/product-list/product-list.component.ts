@@ -34,4 +34,9 @@ productList: Product[];
   onDelete($key:string){
     this.productService.deleteProduct($key);
   }
+
+
+
+
+  
 }
