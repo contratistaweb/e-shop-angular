@@ -26,18 +26,21 @@
 
 -->
 
-<div class="jumbotrom row col flex-row justify-content-center">
-    <h1 class="display-4 col-12">Catalogo de Productos</h1>
-    <div class="card col-3" *ngFor="let product of productList">
+<div class="jumbotrom pre-scrollable row col flex-row justify-content-center">
+    <h1 class="display-5 col-7">Catalogo de Productos</h1>
+    <form class="form-inline col-5 mr-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="¿Que estas buscando?" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+    <div class="card" *ngFor="let product of productList" style="width: 12rem;">
         <img src="{{product.location}}" class="card-img-top img-fluid" alt="{{product.name}}">
         <div class="card-body">
-            <h5 class="card-title ">{{product.name}}</h5>
-            <p class="card-text ">Unds: {{product.unds}}</p>
-            <p class="card-text ">Precio: ${{product.price}}</p>
+            <h6 class="card-title ">{{product.name}}</h6>
+            <p class="card-text ">Unds: {{product.unds}}<br>Precio: ${{product.price}}</p>
 
-            <a href="# " class="btn-sm btn-primary">Ver +</a>
+            <a href="#" class="btn-sm btn-primary">Ver +</a>
 
-            <a href="# " class="btn-sm  btn-success">Añadir</a>
+            <a href="#" class="btn-sm  btn-success">Añadir</a>
             <select class="custom-select-sm m-1">
                 <option selected>unds</option>
                 <option value="1">1</option>
