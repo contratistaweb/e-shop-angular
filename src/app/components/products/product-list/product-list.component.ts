@@ -11,7 +11,8 @@ import { element } from 'protractor';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-productList: Product[]; 
+  filterProducts = '';
+  productList: Product[]; 
   constructor(
     private productService: ProductService
   ) { }

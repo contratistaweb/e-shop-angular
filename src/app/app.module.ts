@@ -24,6 +24,7 @@ import { LoginComponent } from './components/login/login.component';
 import { PrivatepageComponent } from './components/privatepage/privatepage.component';
 //guard
 import { AuthGuard } from './guards/auth.guard';
+import { FilterPipe } from './pipes/filter.pipe';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { AuthGuard } from './guards/auth.guard';
     ProductListComponent,
     ProductComponent,
     LoginComponent,
-    PrivatepageComponent
+    PrivatepageComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

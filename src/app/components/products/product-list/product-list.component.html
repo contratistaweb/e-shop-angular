@@ -26,29 +26,32 @@
 
 -->
 
-<div class="jumbotrom pre-scrollable row col flex-row justify-content-center">
+<div class="jumbotrom pre-scrollable row flex-row">
     <h1 class="display-5 col-7">Catalogo de Productos</h1>
     <form class="form-inline col-5 mr-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="¿Que estas buscando?" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        <label for="filterProducts"><h5>¿Que estas buscando?</h5></label>
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search" name="filterProducts" [(ngModel)]="filterProducts">
     </form>
-    <div class="card" *ngFor="let product of productList" style="width: 12rem;">
+    <div class="card" *ngFor="let product of productList | filter:filterProducts" style="width: 15rem;">
         <img src="{{product.location}}" class="card-img-top img-fluid" alt="{{product.name}}">
         <div class="card-body">
             <h6 class="card-title ">{{product.name}}</h6>
             <p class="card-text ">Unds: {{product.unds}}<br>Precio: ${{product.price}}</p>
-
-            <a class="btn-sm btn-primary" href="#modal2" data-toggle="modal" data-target="#modal2">Ver +</a>
-
-            <a href="#" class="btn-sm  btn-success">Añadir</a>
-            <select class="custom-select-sm m-1">
-                <option selected>unds</option>
-                <option value="1">1</option>
+            <div class=" d-flex row">
+                <div class=" d-flex justify-content-md-start col-5">
+                    <a class="btn-sm btn-primary" href="#modal2" data-toggle="modal" data-target="#modal2">Ver +</a>
+                </div>
+                <div class=" d-flex justify-content-md-end col-7">
+                    <a href="#" class="btn-sm  btn-success">Añadir</a>
+                    <select class="custom-select-sm">
+                <option selected value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
               </select>
+                </div>
+            </div>
         </div>
         <!---   ***   Modal 2   ***   --->
         <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
