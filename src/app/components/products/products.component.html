@@ -10,14 +10,14 @@
             <a class="nav-link" href="#" routerLink="/"><i class="large material-icons">apps</i></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="modal" data-target="#modal1"><i class="small material-icons">shopping_cart</i><span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#modal1" data-toggle="modal" data-target="#modal1"><i class="material-icons">shopping_cart</i><span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#" routerLink="/login" *ngIf="!isLogin">Iniciar Sesion</a>
         </li>
 
         <li class="nav-item" *ngIf="isLogin">
-            <a class="nav-link" href="#" tabindex="-1" (click)="onClickLogout()"><i class="small material-icons">exit_to_app</i></a>
+            <a class="nav-link" href="#" tabindex="-1" (click)="onClickLogout()"><i class="material-icons">exit_to_app</i></a>
         </li>
     </ul>
 
@@ -44,11 +44,11 @@
               </button>
             </div>
             <div class="modal-body">
-                ...
+                ... modal 1
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn-sm btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn-sm btn-primary">Pagar</button>
             </div>
         </div>
     </div>
