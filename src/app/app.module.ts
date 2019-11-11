@@ -19,6 +19,7 @@ import { ProductListComponent } from './components/products/product-list/product
 import { ProductComponent } from './components/products/product/product.component';
 //services
 import { ProductService } from './services/product.service';
+import { ShoppingcarService } from './services/shoppingcar.service';
 import { OauthService } from './services/oauth.service';
 import { LoginComponent } from './components/login/login.component';
 import { PrivatepageComponent } from './components/privatepage/privatepage.component';
@@ -47,6 +48,7 @@ import { FilterPipe } from './pipes/filter.pipe';
   ],
   providers: [
     ProductService,
+    ShoppingcarService,
     OauthService,
     AuthGuard
   ],

@@ -6,6 +6,7 @@ import { Product } from '../models/product'
   providedIn: 'root'
 })
 export class ProductService {
+ 
 
   productList: AngularFireList<any>;
   selectedProduct: Product = new Product();
@@ -23,6 +24,7 @@ export class ProductService {
       price : product.price
     });
   }
+  
   updateProduct(product: Product){
     this.productList.update(product.$key, {
       name : product.name,
@@ -31,7 +33,9 @@ export class ProductService {
       unds : product.unds
     })
   }
+  
   deleteProduct($key: string){
     this.productList.remove($key)
   }
+  
 }
